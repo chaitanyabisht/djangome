@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<title>MY FIRST PAGE IN DJANGO</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color:#483C32;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #FFEBCD;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #FFEBCD;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #6F4E37;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #FFEBCD;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+    
+</head>
+<body>
+
+<h2>MY FIRST PAGE IN DJANGO</h2>
+<p>Hello! This is Ananya, a CSE sophomore at IIT Bhilai.</p>
+
+<header>
+  <h3>About Me</h3>
+    
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">My introduction</a></li>
+      <li><a href="#">My Hobbies</a></li>
+      <li><a href="#">My plans</a></li>
+        <img src="{% static 'linkedinan.jpg' %}" width="150" height="200">
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>My introduction</h1>
+    <p>I am a Computer Science major at IIT Bhilai. I am familiar with python, django and HTML.
+
+I am equipped with a perspective of looking at problems, whether small or significant, from an angle that maximizes results to achieve high productivity levels through long and short-term goals. I also enjoy developing patterns to see complexity simply and evaluate accurately the potential obstacles. She has a passion for learning and growing my skill set, and is open to new experiences and opportunities. </p>
+   
+
+  </article>
+</section>
+   
+
+
+<footer>
+  <p>  TIME of Download : {{ current_time }} -- Ananya</p>
+</footer>
+
+</body>
+</html>

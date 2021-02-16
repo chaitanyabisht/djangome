@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<title>MY FIRST PAGE IN DJANGO</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color:#483C32;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #FFEBCD;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #FFEBCD;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #6F4E37;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #FFEBCD;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+    
+</head>
+<body>
+
+<h2>MY FIRST PAGE IN DJANGO</h2>
+<p>Hello! This is Ananya, a CSE sophomore at IIT Bhilai.</p>
+
+<header>
+  <h3>About me</h3>
+    
+</header>
+
+<section>
+  
+  
+  <article>
+    <h1>My Hobbies</h1>
+    <p>I am a keen learner, currently I am learning to play guitar ,coding related stuff. Hobbies are the things which you gradually or eventually start loving and have a passion for the same. My hobbies are: playing badminton , playing chords on guitar , coding ,graphic designing, photography,video editing , capturing aesthetic time lapse and reading novels(seldom).
+
+you can consider me as jack of all trades and masters of none.😂  </p>
+   
+
+  </article>
+</section>
+   
+
+
+<footer>
+  <p>  TIME NOW : {{ current_year }} -- Ananya</p>
+</footer>
+
+</body>
+</html>
